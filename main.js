@@ -49,6 +49,7 @@ const columnDefs = [
     suppressHorizontalScroll: true, //隐藏水平滚动条
     onGridSizeChanged: function(event){
       //gridApi.sizeToFit();
+      gridApi.sizeColumnsToFit()
       console.log('grid resize width ' + event.clientWidth);
     }
   };
