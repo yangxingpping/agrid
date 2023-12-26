@@ -40,7 +40,10 @@ const columnDefs = [
     columnDefs: columnDefs,
     defaultColDef: {
       width: 150
-    }
+    },
+    autoSizeStrategy: {
+      type: 'fitGridWidth',
+    },
   };
   
   // setup the grid after the page has finished loading
