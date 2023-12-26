@@ -44,6 +44,7 @@ const columnDefs = [
     autoSizeStrategy: {
       type: 'fitGridWidth',
     },
+    suppressHorizontalScroll: true
   };
   
   // setup the grid after the page has finished loading
