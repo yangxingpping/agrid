@@ -23,12 +23,12 @@ const columnDefs = [
         }
       }
     },
-    { field: "year" },
-    { field: "date" },
+    { field: "year"},
+    { field: "date"},
     { field: "sport" },
     { field: "gold" },
     { field: "silver" },
-    { field: "bronze" },
+    { field: "bronze"},
     { field: "total", editable: true, cellEditor: "agSelectCellEditor",
     cellEditorParams: { values: [10, 20] }},
   ];
@@ -39,12 +39,18 @@ const columnDefs = [
   const gridOptions = {
     columnDefs: columnDefs,
     defaultColDef: {
-      width: 150
+      width: 150,
+      resizable: true,
+    
     },
     autoSizeStrategy: {
       type: 'fitGridWidth',
     },
-    suppressHorizontalScroll: true
+    suppressHorizontalScroll: true, //隐藏水平滚动条
+    onGridSizeChanged: function(event){
+      //gridApi.sizeToFit();
+      console.log('grid resize width ' + event.clientWidth);
+    }
   };
   
   // setup the grid after the page has finished loading
